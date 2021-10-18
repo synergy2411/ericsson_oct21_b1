@@ -80,19 +80,19 @@ var numbers = [2,3,4,5];
 
 
 
-function buildTicket(transport){
-    var numOfPass = 0;
+// function buildTicket(transport){
+//     var numOfPass = 0;
 
-    return function(name){
-        return "Hello " + name + "\nYou are going via " + transport + 
-            "\nYour ticket ID #"+ (++numOfPass)
-    }
-}
-var car = buildTicket("Car")
-console.log(car("Foo"))
-console.log(car("Bar"))
-var ship = buildTicket("Ship")
-console.log(ship("Bam"));           // ?
+//     return function(name){
+//         return "Hello " + name + "\nYou are going via " + transport + 
+//             "\nYour ticket ID #"+ (++numOfPass)
+//     }
+// }
+// var car = buildTicket("Car")
+// console.log(car("Foo"))
+// console.log(car("Bar"))
+// var ship = buildTicket("Ship")
+// console.log(ship("Bam"));           // ?
 
 
 
