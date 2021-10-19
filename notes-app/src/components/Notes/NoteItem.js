@@ -1,11 +1,16 @@
+import NoteDate from "./NoteDate";
+
 const NoteItem = (props) => {
   return (
-    <div>
-      <div>
-        <h2>Title : {props.title} </h2>
-      </div>
-      <div>
-        <p>Amount : {props.amount} </p>
+    <div className="col-sm-6 col-md-4">
+      <div className="card">
+          <div className="card-header">
+            <h5 className="text-center">{props.title.toUpperCase()} </h5>
+          </div>
+          <div className="card-body">
+              <p className="lead">Amount : ${props.amount}</p>
+              <NoteDate date={props.date}/>
+          </div>
       </div>
     </div>
   );

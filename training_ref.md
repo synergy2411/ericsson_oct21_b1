@@ -100,3 +100,7 @@
 - Container | Presentational
 - Smart | Dump
 - Controlled | Uncontrolled
+
+
+# React Hooks (v16.8) : used inside functional components
+- useState
