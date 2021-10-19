@@ -1,3 +1,5 @@
+# Git Repo Link - https://github.com/synergy2411/ericsson_oct21_b1
+
 # JavaScript - ECMA 2015 -> ES6/ES2015
 - Vanilla JavaScript
 
@@ -23,3 +25,78 @@
 - Destructuring of Array / Object
 - Default Parameters
 - Template Literals (back tick)
+
+
+# JavaScript Array Functions
+- map
+- some
+- filter
+- find
+- findIndex
+- forEach
+- every
+
+# Asynchronous JavaScript
+- Don't wait
+- Non blocking
+
+
+
+
+
+
+# What is React ?
+- JavaScript Library to build UI (M'V'C)
+- Single Page App
+- Mobile App (React Native)
+- Made by Facebook
+- Fast UI Experience
+- Reusable Components
+- Light-weight
+- Virtual DOM - abstraction of Real DOM / Clone / Copy - in memory
+- Real DOM - created by HTML Elements
+- VDOM - Pure JavaScript representation of Actual DOM
+
+# React and Other Libraries/Frameworks
+- Angular* : Components, Modular Approach, MVC, 2 way data binding, XHR Calls, DOM Manipulation, Animation, DI, SPA, Lazy loading, AoT Compilation, Tree-shaking, Shadow DOM etc
+    - Tree-shaking : remove the unused code;
+     : Introduced v6 - 
+
+     Services : self injected -  @Injectable({ provideIn : LazyModuleClassName | 'root' | 'platform' | 'any' })
+     @NgModule({
+         providers :    [ServiceName]
+     })
+     Services are singleton, but within the scope you inject them.
+
+- VueJS (Evan You): Declaration, VDOM, Template driven, State Management, SPA, 2 way data binding etc
+- Next : Static Web pages, rendered on Server
+- jQuery : DOM Manipulation, Animation, AJAX
+- flutter : Mobile App development
+- Knockout : MVVM, 2 way data-binding
+- Backbone : client side MVC
+- Ember* : frequent changes in API
+- Mootools : 
+- Polymer : Custom Components
+- D3 : Great for Charts
+- ExtJS : build beautiful UI
+
+
+# npx create-react-app <app-name>
+- cd <app-name>
+- npm start
+
+# Component -> reusable piece of code; Thinking in React way
+
+# ATOMIC Design
+- Atoms : Smallest unit; button, input, div, p etc
+- Molecules : Combo of Atoms e.g. seachbar -> inputbox + button
+- Organism : Combo of Molucles e.g. complete form, navbar -> Nav Links + Searchbar
+- Templates : single unit on page
+- Pages : complete page
+
+
+# Types of Component
+- Stateful | Stateless
+- Container | Presentational
+- Smart | Dump
+- Controlled | Uncontrolled
