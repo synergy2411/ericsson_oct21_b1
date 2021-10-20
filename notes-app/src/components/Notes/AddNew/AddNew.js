@@ -4,7 +4,7 @@ import { v4 } from 'uuid';
 const AddNew = (props) => {
 
     const onNoteAdd = (enteredTitle, enteredAmount, enteredDate) => {
-        console.log("AddNew : onNoteAdd")
+        // console.log("AddNew : onNoteAdd")
         // console.log(enteredTitle, enteredAmount, enteredDate)
         let note = {
             id : v4(),
@@ -12,7 +12,7 @@ const AddNew = (props) => {
             amount : enteredAmount,
             date : new Date(enteredDate)
         }
-        console.log(note);
+        props.onSave(note);
     }
 
     return (
@@ -24,7 +24,7 @@ const AddNew = (props) => {
                     </div>
                     <div className="card-body">
                         {/* Form Here */}
-                        <NewNoteForm onAdd={onNoteAdd} />
+                        <NewNoteForm onAdd={onNoteAdd} onToggle = {props.onToggle}/>
                     </div>
                 </div>
             </div>

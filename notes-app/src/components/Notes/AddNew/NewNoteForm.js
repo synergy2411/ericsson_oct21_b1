@@ -42,7 +42,9 @@ const NewNoteForm = (props) => {
       event.preventDefault();
       // console.log(enteredTitle, enteredAmount, enteredDate)
       props.onAdd(enteredTitle, enteredAmount, enteredDate)
-    // console.log(enteredNote)
+      setEnteredTitle('');
+      setEnteredDate('')
+      setEnteredAmount('')
   }
 
    return (
@@ -97,6 +99,7 @@ const NewNoteForm = (props) => {
                   type="button"
                   value="Cancel"
                   className="btn btn-block btn-warning btn-sm"
+                  onClick={props.onToggle}
                 />
               </div>
             </div>
