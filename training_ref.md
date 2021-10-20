@@ -108,3 +108,6 @@
 
 # to generate unique IDs
 - npm install uuid
+
+# Main job of React - to Update the UI and if model change, re-render it;
+# Side Effect / Effect -> Other Operators - making XHR Call, reading, writing, changing the state etc
