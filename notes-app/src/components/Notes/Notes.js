@@ -55,7 +55,7 @@ function Notes() {
       {/* {addNew} */}
       <br/>
       <div className="row">
-        {filteredNotes.map(note => <NoteItem key={note.id} title={note.title} amount={note.amount} date={note.date} />)}
+        {filteredNotes.map(note => <NoteItem key={note.id} title={note.title} amount={note.amount} date={note.date} /> )}
       </div>
     </div>
   );

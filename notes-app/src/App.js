@@ -7,17 +7,17 @@ import Notes from "./components/Notes/Notes";
 class App extends Component {
   constructor(){
     super();
-    // this.state = {
-    //   title : "SomeTitle",
-    //   toggleComp : false
-    // }
+    this.state = {
+      title : "SomeTitle",
+      toggleComp : false
+    }
     console.clear()
   }
   render() {
     return (
       <div className="container">
-        {/* <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>Toggle Comp</button>
-        {this.state.toggleComp && <ClassBasedComp title={this.state.title} />} */}
+        <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>Toggle Comp</button>
+        {this.state.toggleComp && <ClassBasedComp title={this.state.title} />}
         <br />
         <hr />
         <Notes />

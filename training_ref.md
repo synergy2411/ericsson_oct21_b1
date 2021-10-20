@@ -111,3 +111,18 @@
 
 # Main job of React - to Update the UI and if model change, re-render it;
 # Side Effect / Effect -> Other Operators - making XHR Call, reading, writing, changing the state etc
+
+
+When to use Classes for creating Component
+    - LifeCycle Methods
+    - State Management
+
+When to use Functions for creating Component
+    - useEffect() - componentDidMount, ComponentDidiUpdate, componentWillUnmount
+    - useState()
+
+# Prior to v16.8
+- Functional Components - Stateless, Presentational, Dump
+- Class Component - Stateful, Container, Smart
+
+# to install PropTypes > npm install prop-types
