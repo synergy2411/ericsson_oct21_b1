@@ -1,4 +1,6 @@
+import React from "react";
 import NoteDate from "./NoteDate";
+import PropTypes from 'prop-types';
 
 const NoteItem = (props) => {
   return (
@@ -15,5 +17,11 @@ const NoteItem = (props) => {
     </div>
   );
 };
+
+NoteItem.propTypes = {
+  title : PropTypes.string.isRequired,
+  amount : PropTypes.number.isRequired,
+  date : PropTypes.instanceOf(Date).isRequired
+}
 
 export default NoteItem;
