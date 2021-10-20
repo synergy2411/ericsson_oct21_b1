@@ -104,3 +104,7 @@
 
 # React Hooks (v16.8) : used inside functional components
 - useState
+    : Whenever currentState depends on the previousState, always use setFunction() syntax
+
+# to generate unique IDs
+- npm install uuid

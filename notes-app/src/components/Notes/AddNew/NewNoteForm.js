@@ -40,7 +40,8 @@ const NewNoteForm = (props) => {
 
   const submitHandler = event => {
       event.preventDefault();
-      console.log(enteredTitle, enteredAmount, enteredDate)
+      // console.log(enteredTitle, enteredAmount, enteredDate)
+      props.onAdd(enteredTitle, enteredAmount, enteredDate)
     // console.log(enteredNote)
   }
 
