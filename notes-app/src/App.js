@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component, useState } from "react";
 import ClassBasedComp from "./components/CompType/ClassBasedComp";
+import FormDemo from "./components/Demo/FormDemo";
 
 import Notes from "./components/Notes/Notes";
 
@@ -16,8 +17,9 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>Toggle Comp</button>
-        {this.state.toggleComp && <ClassBasedComp title={this.state.title} />}
+        <FormDemo />
+        {/* <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>Toggle Comp</button>
+        {this.state.toggleComp && <ClassBasedComp title={this.state.title} />} */}
         <br />
         <hr />
         <Notes />
