@@ -126,3 +126,12 @@ When to use Functions for creating Component
 - Class Component - Stateful, Container, Smart
 
 # to install PropTypes > npm install prop-types
+
+# useEffect() without dependency 
+    - useEffect will run after initial rendering, and also after any state change
+
+# useEffect() with empty dependencies =[]
+    - useEffect will run only after initial rendering
+
+# useEffect() with some dependency = [deps]
+    - userEffect will run after initial rendering, after all changes in dependency

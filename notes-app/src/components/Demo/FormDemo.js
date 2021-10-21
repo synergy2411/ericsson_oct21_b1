@@ -1,6 +1,11 @@
+import React from "react";
+
 import { useFormik } from "formik";
 
 const FormDemo = () => {
+  const usernameInputRef = React.createRef();
+//   React.useRef()
+
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -14,8 +19,8 @@ const FormDemo = () => {
       if (!values.email.includes("@")) {
         errors.email = "Should be in proper email format";
       }
-      if(values.age > 60){
-          errors.age = "Should be less than 60";
+      if (values.age > 60) {
+        errors.age = "Should be less than 60";
       }
       return errors;
     },
@@ -24,7 +29,11 @@ const FormDemo = () => {
     },
   });
 
-  console.log(formik)
+  //   console.log(formik)
+
+  const clickHandler = () => {
+    console.log("Username : ", usernameInputRef.current.value);      // {current : }
+  };
 
   return (
     <form onSubmit={formik.handleSubmit}>
@@ -54,15 +63,25 @@ const FormDemo = () => {
           onChange={formik.handleChange}
           value={formik.values.age}
         />
-        {formik.errors.age ? 
-            <div className="alert alert-danger">{formik.errors.age} </div> 
-            : null}
+        {formik.errors.age ? (
+          <div className="alert alert-danger">{formik.errors.age} </div>
+        ) : null}
       </div>
 
-      <input type="submit" 
-        value="Submit Form" 
-        className="btn btn-primary" 
-        disabled={!formik.isValid} />
+      <div className="form-group">
+        <label htmlFor="">Username : </label>
+        <input type="text" name="username" ref={usernameInputRef} />
+        <button className="btn btn-success" onClick={clickHandler}>
+          Get Username
+        </button>
+      </div>
+
+      <input
+        type="submit"
+        value="Submit Form"
+        className="btn btn-primary"
+        disabled={!formik.isValid}
+      />
     </form>
   );
 };
