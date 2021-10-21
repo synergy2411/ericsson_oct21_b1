@@ -127,11 +127,26 @@ When to use Functions for creating Component
 
 # to install PropTypes > npm install prop-types
 
+
+
+
+
+
+
+
 # useEffect() without dependency 
     - useEffect will run after initial rendering, and also after any state change
 
-# useEffect() with empty dependencies =[]
+# useEffect() with empty dependencies =[] (componentDidMount)
     - useEffect will run only after initial rendering
 
-# useEffect() with some dependency = [deps]
+# useEffect() with some dependency = [deps] (componentDidUpdate)
     - userEffect will run after initial rendering, after all changes in dependency
+
+# useEffect() return clean-up function
+    - Will NOT fire after the initial rendering
+    - For subsequent rendering, clean-up function will fire before the useEffect() callback function
+    - Before unmounting the component, useEffect() will call clean-up function (componentWillUnmount)
+
+
+# useReducer() - tom manage complex state

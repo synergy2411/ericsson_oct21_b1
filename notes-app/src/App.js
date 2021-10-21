@@ -3,6 +3,7 @@ import React, { Component, useState } from "react";
 import ClassBasedComp from "./components/CompType/ClassBasedComp";
 import EffectHookDemo from "./components/Demo/EffectHookDemo";
 import FormDemo from "./components/Demo/FormDemo";
+import ReducerHookDemo from "./components/Demo/ReducerHookDemo";
 
 import Notes from "./components/Notes/Notes";
 
@@ -11,20 +12,20 @@ class App extends Component {
     super();
     this.state = {
       title : "SomeTitle",
-      toggleComp : false
+      toggleComp : true
     }
     console.clear()
   }
   render() {
     return (
       <div className="container">
-        <EffectHookDemo />
+        <ReducerHookDemo />
+        {/* {this.state.toggleComp && <EffectHookDemo />} */}
         {/* <FormDemo /> */}
-        {/* <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>Toggle Comp</button>
-        {this.state.toggleComp && <ClassBasedComp title={this.state.title} />} */}
-        <br />
-        <hr />
-        <Notes />
+        {/* <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>
+            Toggle Comp</button> */}
+        {/* {this.state.toggleComp && <ClassBasedComp title={this.state.title} />} */}
+        {/* <Notes /> */}
       </div>
     );
   }
