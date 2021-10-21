@@ -1,16 +1,29 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import AuthContext from "../../store/auth-context";
 
-const NoteDate = props => {
-    let month = props.date.toLocaleString('en-US', {month : 'long'})
-    let day = props.date.toLocaleString('en-US', {day : 'numeric'})
-    let year = props.date.getFullYear()
+const NoteDate = (props) => {
+  let month = props.date.toLocaleString("en-US", { month: "long" });
+  let day = props.date.toLocaleString("en-US", { day: "numeric" });
+  let year = props.date.getFullYear();
 
-    return (
-        <p>Created At : {month} {day}, {year}</p>
-    )
-}
+  return (
+    <AuthContext.Consumer>
+      {(context) => {
+          console.log("Context : ", context)
+          console.log("Value from Context ", context.getValue())
+        return (
+          <div>
+            <p>
+              Created At : {month} {day}, {year}
+            </p>
+          </div>
+        );
+      }}
+    </AuthContext.Consumer>
+  );
+};
 
 NoteDate.propTypes = {
-    date : PropTypes.instanceOf(Date)
-}
+  date: PropTypes.instanceOf(Date),
+};
 export default NoteDate;

@@ -25,7 +25,7 @@ class App extends Component {
         {/* <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>
             Toggle Comp</button> */}
         {/* {this.state.toggleComp && <ClassBasedComp title={this.state.title} />} */}
-        {/* <Notes /> */}
+        <Notes />
       </div>
     );
   }

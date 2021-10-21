@@ -1,4 +1,6 @@
 import "./Notes.css";
+import AuthContext from '../../store/auth-context';
+
 import NoteItem from "./NoteItem";
 import AddNew from "./AddNew/AddNew";
 import { useState } from "react";
@@ -40,7 +42,11 @@ function Notes() {
   let filteredNotes = notes.filter(note => note.date.getFullYear().toString() === selectedYear)
 
   return (
-    <div>
+    <AuthContext.Provider value={{
+      token : "DUMMY_TOKEN",
+      getValue : () => "Some Value",
+      onChangeFilterYear : onChangeFilterYear
+      }}> 
       <div className="row">
         <div className="col-6">
           <button className="btn btn-block btn-primary" onClick={onToggle}>
@@ -48,7 +54,7 @@ function Notes() {
             </button>
         </div>
         <div className="col-6">
-          <FilterYear onChangeFilterYear={onChangeFilterYear} selectedYear={selectedYear}/>
+          <FilterYear selectedYear={selectedYear}/>
         </div>
       </div>
       {toggleForm && <AddNew onSave={onSaveNewNote} onToggle={onToggle} />}
@@ -57,7 +63,7 @@ function Notes() {
       <div className="row">
         {filteredNotes.map(note => <NoteItem key={note.id} title={note.title} amount={note.amount} date={note.date} /> )}
       </div>
-    </div>
+      </AuthContext.Provider>
   );
 }
 

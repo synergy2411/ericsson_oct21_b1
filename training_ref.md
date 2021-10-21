@@ -149,4 +149,11 @@ When to use Functions for creating Component
     - Before unmounting the component, useEffect() will call clean-up function (componentWillUnmount)
 
 
-# useReducer() - tom manage complex state
+# useReducer() - to manage complex state
+    - Redux pattern
+
+# useState vs useReducer
+
+
+# useContext() - 
+    - Context API -> "Prop drilling" -> 
