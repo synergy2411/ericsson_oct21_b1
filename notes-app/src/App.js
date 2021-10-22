@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component, useState } from "react";
-import { Route }  from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 
 import ClassBasedComp from "./components/CompType/ClassBasedComp";
 import CallbackHook from "./components/Demo/CallbackHook";
@@ -10,33 +10,43 @@ import ReducerHookDemo from "./components/Demo/ReducerHookDemo";
 import Header from "./components/Header/Header";
 
 import Notes from "./components/Notes/Notes";
+import DummyPost from "./components/Posts/DummyPost";
+import PostDetail from "./components/Posts/PostDetail";
 import Posts from "./components/Posts/Posts";
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      title : "SomeTitle",
-      toggleComp : true
-    }
-    console.clear()
+      title: "SomeTitle",
+      toggleComp: true,
+    };
+    console.clear();
   }
   render() {
     return (
       <div className="container">
         <Header />
-        <br/>
+        <br />
 
-
+        <Switch>
           {/* http://localhost:3000/notes */}
-        <Route path="/notes">           
-          <Notes />
-        </Route>
-        {/* http://localhost:3000/posts */}
-        <Route path="/posts">
-          <Posts />
-        </Route>
-        
+          <Route path="/notes">
+            <Notes />
+          </Route>
+          {/* http://localhost:3000/posts */}
+          <Route path="/posts" exact>
+            <Posts />
+          </Route>
+          {/* http://localhost:3000/posts/123*/}
+          <Route path="/posts/:id">
+            <PostDetail />
+          </Route>
+          <Route path="/dummy-post">
+            <DummyPost />
+          </Route>
+        </Switch>
+
         {/* <CallbackHook /> */}
 
         {/* <ReducerHookDemo /> */}
