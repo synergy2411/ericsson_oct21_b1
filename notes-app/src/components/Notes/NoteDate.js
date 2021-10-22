@@ -9,8 +9,6 @@ const NoteDate = (props) => {
   return (
     <AuthContext.Consumer>
       {(context) => {
-          console.log("Context : ", context)
-          console.log("Value from Context ", context.getValue())
         return (
           <div>
             <p>

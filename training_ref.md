@@ -167,6 +167,48 @@ When to use Functions for creating Component
 # useCallback() 
     : points to same memory location; does NOT create the callback function in memory after re-rendering.
 
+# useMemo() => React.memo() + useCallback()
+
+
+
+# What is SPA ?
+- Single Page App
+- Does not refresh / reload the browser
+- Less server interaction
+- Efficient user interaction
+
+
+-> User clicks some link -> Change the URL -> Render some Component
+
+- http://our-doamin.com/posts   -> Posts Component
+- http://our-doamin.com/welcome -> Welcome Component
+- 
+
+
+# to work with SPA (React Router) -> npm install react-router-dom
+
+- Route
+- BrowserRouter
+- Link
+- Redirect
+- Prompt : canDeactivate
+- Location
+- History
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
