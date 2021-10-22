@@ -1,18 +1,13 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { Component, useState } from "react";
-import { Route, Switch } from "react-router-dom";
-
-import ClassBasedComp from "./components/CompType/ClassBasedComp";
-import CallbackHook from "./components/Demo/CallbackHook";
-import EffectHookDemo from "./components/Demo/EffectHookDemo";
-import FormDemo from "./components/Demo/FormDemo";
-import ReducerHookDemo from "./components/Demo/ReducerHookDemo";
+import React, { Component } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/Header/Header";
-
 import Notes from "./components/Notes/Notes";
 import DummyPost from "./components/Posts/DummyPost";
 import PostDetail from "./components/Posts/PostDetail";
 import Posts from "./components/Posts/Posts";
+
+
 
 class App extends Component {
   constructor() {
@@ -30,6 +25,10 @@ class App extends Component {
         <br />
 
         <Switch>
+          {/* http://localhost:3000/ */}
+          <Route path="/" exact>
+            <Redirect to="/posts" ></Redirect>
+          </Route>
           {/* http://localhost:3000/notes */}
           <Route path="/notes">
             <Notes />

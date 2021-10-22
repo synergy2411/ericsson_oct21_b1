@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
+import { Prompt } from 'react-router';
 
 const NewNoteForm = (props) => {
 
@@ -11,6 +12,7 @@ const NewNoteForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('')
     const [enteredAmount, setEnteredAmount] = useState('')
     const [enteredDate, setEnteredDate] = useState('')
+    const [isFocus, setIsFocus] = useState(false);
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -47,10 +49,16 @@ const NewNoteForm = (props) => {
       setEnteredAmount('')
   }
 
+  const formFocusHandler = () => {
+    setIsFocus(true);
+  }
+
    return (
+     <Fragment>
+       <Prompt when={isFocus} message={() => "Are you sure to leve this form?"} />
     <div className="row">
       <div className="col-10 offset-1">
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} onFocus={formFocusHandler}>
           {/* Title */}
           <div className="form-group">
             <label htmlFor="title">Title : </label>
@@ -107,6 +115,7 @@ const NewNoteForm = (props) => {
         </form>
       </div>
     </div>
+    </Fragment>
   );
 };
 

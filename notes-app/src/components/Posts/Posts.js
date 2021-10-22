@@ -3,11 +3,11 @@ import { useHistory, useLocation } from "react-router";
 import "./Posts.css";
 
 const orderPosts = (posts, isAscending) => {
-  return posts.sort((a,b) => {
+  return posts.sort((a, b) => {
     if (isAscending) {
-        return a.title > b.title ? 1 : -1
+      return a.title > b.title ? 1 : -1;
     } else {
-        return a.title < b.title ? 1 : -1
+      return a.title < b.title ? 1 : -1;
     }
   });
 };
@@ -38,7 +38,7 @@ const Posts = () => {
     history.push(`${location.pathname}?order=${isAscending ? "desc" : "asc"}`);
   };
 
-  const orderedPosts = orderPosts(posts, isAscending)
+  const orderedPosts = orderPosts(posts, isAscending);
 
   return (
     <Fragment>
