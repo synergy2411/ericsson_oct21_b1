@@ -1,12 +1,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component, useState } from "react";
+import { Route }  from 'react-router-dom';
+
 import ClassBasedComp from "./components/CompType/ClassBasedComp";
 import CallbackHook from "./components/Demo/CallbackHook";
 import EffectHookDemo from "./components/Demo/EffectHookDemo";
 import FormDemo from "./components/Demo/FormDemo";
 import ReducerHookDemo from "./components/Demo/ReducerHookDemo";
+import Header from "./components/Header/Header";
 
 import Notes from "./components/Notes/Notes";
+import Posts from "./components/Posts/Posts";
 
 class App extends Component {
   constructor(){
@@ -20,7 +24,20 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <CallbackHook />
+        <Header />
+        <br/>
+
+
+          {/* http://localhost:3000/notes */}
+        <Route path="/notes">           
+          <Notes />
+        </Route>
+        {/* http://localhost:3000/posts */}
+        <Route path="/posts">
+          <Posts />
+        </Route>
+        
+        {/* <CallbackHook /> */}
 
         {/* <ReducerHookDemo /> */}
         {/* {this.state.toggleComp && <EffectHookDemo />} */}

@@ -12,7 +12,7 @@ const CallbackHook = () => {
 
     const btnClickHandler = () => { setShowMemo(!showMemo)}
 
-    const onSelectCountry =useCallback((country) => {
+    const onSelectCountry = useCallback((country) => {
         console.log("Selected Country : ", country);
         setCountry(country);
     },[])
