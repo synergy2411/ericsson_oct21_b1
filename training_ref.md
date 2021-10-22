@@ -156,4 +156,27 @@ When to use Functions for creating Component
 
 
 # useContext() - 
-    - Context API -> "Prop drilling" -> 
+    - Context API -> "Props drilling" -> 
+
+# useContext() - bi-directional
+# Redux Pattern - uni-directional | one source of truth
+
+
+# React.memo() : memorize the value, re-renders the UI
+    : Change Detection - Default Stragtegy
+# useCallback() 
+    : points to same memory location; does NOT create the callback function in memory after re-rendering.
+
+
+
+
+
+
+
+
+
+
+
+
+# styledComponent
+# React - Redux boilerplate 

@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component, useState } from "react";
 import ClassBasedComp from "./components/CompType/ClassBasedComp";
+import CallbackHook from "./components/Demo/CallbackHook";
 import EffectHookDemo from "./components/Demo/EffectHookDemo";
 import FormDemo from "./components/Demo/FormDemo";
 import ReducerHookDemo from "./components/Demo/ReducerHookDemo";
@@ -19,13 +20,15 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <ReducerHookDemo />
+        <CallbackHook />
+
+        {/* <ReducerHookDemo /> */}
         {/* {this.state.toggleComp && <EffectHookDemo />} */}
         {/* <FormDemo /> */}
         {/* <button onClick={() => this.setState({toggleComp : !this.state.toggleComp})}>
             Toggle Comp</button> */}
         {/* {this.state.toggleComp && <ClassBasedComp title={this.state.title} />} */}
-        <Notes />
+        {/* <Notes /> */}
       </div>
     );
   }

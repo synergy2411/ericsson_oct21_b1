@@ -5,3 +5,6 @@ const AuthContext = React.createContext({
 })
 
 export default AuthContext;
+
+// Provider -> Value
+// Consumer
