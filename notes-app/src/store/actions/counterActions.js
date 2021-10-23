@@ -6,8 +6,23 @@ export const ADD_COUNTER = "ADD_COUNTER";
 export const SUBTRACT_COUNTER = "SUBTRACT_COUNTER";
 
 export const STORE_RESULT= "STORE_RESULT";
+export const DELETE_RESULT= "DELETE_RESULT";
 
 // Action Creators
+
+export function onStoreResult(counter){
+    return {
+        type : STORE_RESULT,
+        counter
+    }
+}
+
+export function onDeleteResult(index){
+    return {
+        type : DELETE_RESULT,
+        index
+    }
+}
 
 export function onAddCounter(value){
     return {
