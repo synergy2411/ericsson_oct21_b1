@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import Counter from "./components/Counter/Counter";
 import Header from "./components/Header/Header";
 import Notes from "./components/Notes/Notes";
 import DummyPost from "./components/Posts/DummyPost";
@@ -43,6 +44,9 @@ class App extends Component {
           </Route>
           <Route path="/dummy-post">
             <DummyPost />
+          </Route>
+          <Route path="/counter">
+            <Counter />
           </Route>
         </Switch>
 

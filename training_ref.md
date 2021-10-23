@@ -198,8 +198,8 @@ When to use Functions for creating Component
 
 # to create package.json > npm init -y
 
-
-
+# to integrate react with redux :
+> npm install redux react-redux
 
 
 
