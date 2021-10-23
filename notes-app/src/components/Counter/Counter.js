@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { connect } from 'react-redux';
 import CounterButton from './CounterButton';
+import CounterResult from './CounterResult';
 
 const Counter = (props) => {
     return (
@@ -9,6 +10,9 @@ const Counter = (props) => {
         <p className="display-4">Counter : {props.counter}</p>
         <hr />
         <CounterButton />
+        <br/>
+        <br/>
+        <CounterResult />
         </div>
     </Fragment>
     )

@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-import { useParams, Redirect} from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const PostDetail = (props) => {
     const params = useParams()
@@ -9,7 +9,7 @@ const PostDetail = (props) => {
         fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
             .then(response => response.json())
             .then(post => setPost(post))
-        }, [])
+        }, [params.id])
 
         // if(!localStorage.getItem("token")){
         //     return <Redirect to="/posts"></Redirect>
