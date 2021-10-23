@@ -15,7 +15,8 @@ const CounterButton = props => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIncrease : () => dispatch({type : fromActions.INCREMENT}),
+        // onIncrease : () => dispatch({type : fromActions.INCREMENT}),
+        onIncrease : () => dispatch(fromActions.asyncIncrement()),
         onDecrease : () => dispatch({type : fromActions.DECREMENT}),
         onAdd: value => dispatch(fromActions.onAddCounter(value)),
         onSubtract : value => dispatch(fromActions.onSubtractCounter(value))

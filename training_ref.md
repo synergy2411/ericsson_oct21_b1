@@ -201,13 +201,26 @@ When to use Functions for creating Component
 # to integrate react with redux :
 > npm install redux react-redux
 
+# to install Thunk > npm install redux-thunk
 
 
+# build > npm run build -> /build/static_assets
+
+- Firebase Hosting Service
+- Gmail Credentials
+
+# Firebase Hosting
+- npm install firebase-tools -g
+- firebase login
+- firebase init
+    - What do you want to use as your public directory? build
+    - Configure as a single-page app (rewrite all urls to /index.html)? Yes
+    - Set up automatic builds and deploys with GitHub? No
+    - File build/index.html already exists. Overwrite? No
+- firebase deploy
 
 
-
-
-
+# Deploed URL : https://react-notes-app-5ba59.web.app
 
 
 

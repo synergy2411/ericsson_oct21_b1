@@ -10,6 +10,23 @@ export const DELETE_RESULT= "DELETE_RESULT";
 
 // Action Creators
 
+export function onIncrement(){
+    return {
+        type : INCREMENT
+    }
+}
+
+export function asyncIncrement(){
+    return function(dispatch){
+        // We can write all async code here like making XHR Call / timers etc
+        // fetch().then(response => response.json()).then(posts => dispatch(posts))
+        setTimeout(() =>{
+            dispatch(onIncrement())
+        }, 1000);
+    }
+}
+
+
 export function onStoreResult(counter){
     return {
         type : STORE_RESULT,
