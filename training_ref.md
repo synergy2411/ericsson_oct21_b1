@@ -196,7 +196,7 @@ When to use Functions for creating Component
 - History
 
 
-
+# to create package.json > npm init -y
 
 
 
